@@ -18,15 +18,16 @@
 <body>
 <script src="html5-qrcode.min.js"> </script>
 
-<div style="width: 500px" id="reader"></div>
+<div style="width: 300px; height: 50%;" id="reader"></div>
 <br/>
-<input type="text" style="width: 500px;" id="decodedResultBox">
+<p>ID</p>
+<input type="text" style="width: 300px;" id="decodedResultBox">
 <script>
     function onScanSuccess(decodedText, decodedResult) {
         // Handle on success condition with the decoded text or result.
         console.log(`Scan result: ${decodedText}`, decodedResult);
         document.getElementById('decodedResultBox').value = ``;
-        document.getElementById('decodedResultBox').value = `Scan result: ${decodedText}`;
+        document.getElementById('decodedResultBox').value = `${decodedText}`;
     }
 
     var html5QrcodeScanner = new Html5QrcodeScanner(
