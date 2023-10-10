@@ -1,0 +1,40 @@
+
+ section {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  position: absolute;
+/*   top: 0;
+  left: 0; */
+  height: 100%;
+}
+
+#original {
+  position: relative;
+  overflow: hidden;
+  background-color: aliceblue;
+  margin-left: 100px;
+  border-left: 100px solid aliceblue;
+  border-top: 100px solid rgb(0, 136, 255);
+  border-bottom: 100px solid rgb(141, 195, 35);
+  border-right: 100px solid rgb(255, 26, 167);
+}
+
+p {
+  
+  font-size: 45px;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+    /* margin-right: 20px; */
+   height: 300px;
+   width: 300px;
+}

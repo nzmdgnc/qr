@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta charset="UTF-8">
+                <title>Page Title</title>
+                <link rel="stylesheet" href="style.css">
+                <script src="html2canvas.min.js"></script>
+                <script src="jquery.min.js"></script>
+        </head>
+        <body>
+                <section>
+                        <div id="original" class="container">
+                            <img src="IMG_9361.jpg"/>
+                         <p>PNG original</p>
+                        </div>
+                        <br/>
+                        
+                    </section>
+                    <section>
+                        <div class="container" id="canvas-container">
+                        </div> 
+                        <button onclick="convert()">Convert</button>
+                    </section>
+
+        </body>
+        <script>
+
+function convert() {
+    const original = document.querySelector('#original')
+    const canvasContainer = document.querySelector('#canvas-container')
+
+html2canvas(original, {
+     scale: 2,
+     useCORS: true,
+     allowTaint: true,
+ }).then(canvas => {
+    canvasContainer.appendChild(canvas);
+    console.log(canvas.toDataURL("image/png"));
+/*     var a = document.createElement('a');
+    a.href = canvas.toDataURL("image/png");
+    a.download = 'somefilename.png';
+    a.click(); */
+})
+}
+
+
+
+         
+         </script>
+</html>
