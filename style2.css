@@ -1,0 +1,81 @@
+/*  CODE MAX */
+:root {
+    --customPadding: 50px;
+  }
+  
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .main-box {
+    position: relative;
+  
+  }
+  .module-border-wrap {
+   
+    display:inline-block;
+   
+    background: linear-gradient(to top, red, purple);
+    padding: var(--customPadding);
+  }
+  
+  .module {
+    display:inline-block;
+  
+    color: #222;
+   /* padding: 2rem; */
+  }
+  
+  .module img {
+    min-width: 300px;
+  }
+  
+  .logo-wrapper {
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: var(--customPadding);
+  }
+  
+  .logo-wrapper img  {
+    max-height: 15px;
+  }
+  
+  .title-wrapper {
+    position:absolute;
+    left: var(--customPadding);
+    top: 50%;
+    transform: translateY(-50%);
+  
+    color: #fff;
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .top-wrapper {
+    position:absolute;
+    top: 0;
+    left:0;
+    right: 0;
+    height: var(--customPadding);
+  }
+  
+  .claim {
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+  }
+  
+  .bottom-wrapper {
+    position:absolute;
+    left:0;
+    right: 0;
+    bottom:0;
+    height: var(--customPadding);
+  }
+  

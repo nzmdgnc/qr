@@ -10,9 +10,17 @@ img {
   left: 0; */
   height: 100%;
 }
+#uppertext{
+  top: -80px;
+  z-index: 1000;
+} 
 
-#original {
+#original{
   position: relative;
+  
+}
+.innercontent{
+
   overflow: hidden;
   background-color: aliceblue;
   margin-left: 100px;
@@ -37,4 +45,19 @@ p {
     /* margin-right: 20px; */
    height: 300px;
    width: 300px;
+}
+
+
+.module-border-wrap {
+  max-width: 250px;
+  padding: 1rem;
+  position: relative;
+  background: linear-gradient(to top, red, purple);
+  padding: 30px;
+}
+
+.module {
+  background: white;
+  color: #222;
+  padding: 2rem;
 }
