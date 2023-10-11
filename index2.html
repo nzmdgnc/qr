@@ -1,56 +1,72 @@
 <!DOCTYPE html>
 <html>
-        <head>
-                <meta charset="UTF-8">
-                <title>Page Title</title>
-                <link rel="stylesheet" href="style.css">
-                <script src="html2canvas.min.js"></script>
-                <script src="jquery.min.js"></script>
-        </head>
-        <body>
-                <section>
-                        <div id="original" class="container">
-                            <div class="innercontent"> 
-                                <img src="IMG_9361.jpg"/>
-                                <p id="uppertext">PNG original</p>
-                            </div>
-                        </div>
-                        <br/>
-                        
-                    </section>
-                    <section>
-                        <div class="container" id="canvas-container">
-                        </div> 
-                        <button onclick="convert()">Convert2</button>
-                    </section>
 
-                    <div class="module-border-wrap"><div class="module">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero pariatur corporis quaerat voluptatum eos tempora temporibus nisi voluptates sed, exercitationem sequi dolore culpa incidunt accusamus, quasi unde reprehenderit ea molestias.
-                        </div></div>
+<head>
+    <meta charset="UTF-8">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="html2canvas.min.js"></script>
+    <script src="jquery.min.js"></script>
+</head>
 
-        </body>
-        <script>
-
-function convert() {
-    const original = document.querySelector('#original')
-    const canvasContainer = document.querySelector('#canvas-container')
-
-html2canvas(original, {
-     scale: 2,
-     useCORS: true,
-     allowTaint: true,
- }).then(canvas => {
-    canvasContainer.appendChild(canvas);
-    console.log(canvas.toDataURL("image/png"));
-     var a = document.createElement('a');
-    a.href = canvas.toDataURL("image/png");
-    a.download = 'somefilename.png';
-    a.click(); 
-})
-}
+<body>
 
 
 
-         
-         </script>
+    <section id="BOX" style="display: inline-block;">
+    <div class="main-box module-border-wrap">
+        <div class="top-wrapper">
+            <div class="claim">
+               Gemeinsam  <span class="claim-Italic">Neues Schaffen</span>
+            </div>
+  
+        </div>
+        <div class="module">
+            <img src="GoBeyond.png" />
+        </div>
+
+        <div class="bottom-wrapper">
+            <div class="title-wrapper">MITARBEITERFEST 2023</div>
+
+            <div class="logo-wrapper">
+                <img src="logo.svg" alt="">
+            </div>
+        </div>
+      
+    </div>
+</section>
+
+<section>
+    <div class="container" id="canvas-container">
+    </div>
+    <button onclick="convert()">Convert2</button>
+</section>
+
+
+</body>
+<script>
+
+    function convert() {
+        const original = document.querySelector('#BOX')
+        const canvasContainer = document.querySelector('#canvas-container')
+
+        html2canvas(original, {
+            scale: 2,
+            useCORS: true,
+            allowTaint: true,
+        }).then(canvas => {
+            canvasContainer.appendChild(canvas);
+            console.log(canvas.toDataURL("image/png"));
+            var a = document.createElement('a');
+            a.href = canvas.toDataURL("image/png");
+            a.download = 'somefilename.png';
+            a.click();
+        })
+    }
+
+
+
+
+</script>
+
 </html>

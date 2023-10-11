@@ -1,63 +1,91 @@
-
- section {
-  display: flex;
-  justify-content: center;
+/*  CODE MAX */
+:root {
+  --customPadding: 50px;
+}
+@font-face {
+  font-family: "ClanforLBBWMedium";
+  src:
+    url("fonts/ClanforLBBW-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "ClanforLBBWNews";
+  src:
+    url("fonts/ClanforLBBW-News.ttf") format("truetype");
 }
 
 img {
-  position: absolute;
-/*   top: 0;
-  left: 0; */
-  height: 100%;
+  max-width: 100%;
+  height: auto;
 }
-#uppertext{
-  top: -80px;
-  z-index: 1000;
-} 
 
-#original{
+.main-box {
   position: relative;
-  
 }
-.innercontent{
-
-  overflow: hidden;
-  background-color: aliceblue;
-  margin-left: 100px;
-  border-left: 100px solid aliceblue;
-  border-top: 100px solid rgb(0, 136, 255);
-  border-bottom: 100px solid rgb(141, 195, 35);
-  border-right: 100px solid rgb(255, 26, 167);
-}
-
-p {
-  
-  font-size: 45px;
-  position: absolute;
-  top: 40px;
-  left: 40px;
-}
-
-.container {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-    /* margin-right: 20px; */
-   height: 300px;
-   width: 300px;
-}
-
-
 .module-border-wrap {
-  max-width: 250px;
-  padding: 1rem;
-  position: relative;
+  display:inline-block;
   background: linear-gradient(to top, red, purple);
-  padding: 30px;
+  padding: var(--customPadding);
 }
 
 .module {
-  background: white;
   color: #222;
-  padding: 2rem;
+  margin-bottom: -2px;
+}
+
+.module img {
+  min-width: 300px;
+}
+
+.logo-wrapper {
+  position:absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: var(--customPadding);
+}
+
+.logo-wrapper img  {
+  max-height: 18px;
+}
+
+.title-wrapper {
+  font-family:ClanforLBBWNews;
+  position:absolute;
+  left: var(--customPadding);
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.top-wrapper {
+  position:absolute;
+  top: 0;
+  left:0;
+  right: 0;
+  height: var(--customPadding);
+}
+
+.claim {
+  font-family: ClanforLBBWNews;
+  position:absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.claim-Italic {
+  font-family: ClanforLBBWMedium;
+  font-style: italic;
+}
+
+.bottom-wrapper {
+  position:absolute;
+  left:0;
+  right: 0;
+  bottom:0;
+  height: var(--customPadding);
 }
